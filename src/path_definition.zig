@@ -4,7 +4,9 @@ const BezierSegment = @import("bezier_segment.zig").BezierSegment;
 const AnchorPoint = @import("anchor_point.zig").AnchorPoint;
 
 pub const PathDefinition = struct {
+    name: []const u8,
     control_points: []const Vec2,
+
     const Self = @This();
 
     pub fn getSegmentCount(self: Self) usize {
